@@ -1,5 +1,6 @@
 from selene import browser, be, have
 
+
 def test_should_find_selene(setting_browser):
     browser.element('[name="q"]').should(be.blank).type('Hello World!').press_enter() # Находим поле ввода, вводим текст и жмём Enter
     browser.element('html').should(have.text('programming language')) # Ищем указанный текст на странице выдачи результатов
